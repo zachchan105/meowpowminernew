@@ -1,6 +1,6 @@
 #include "ApiServer.h"
 
-#include <kawpowminer/buildinfo.h>
+#include <meowpowminer/buildinfo.h>
 
 #include <libethcore/Farm.h>
 
@@ -1191,7 +1191,7 @@ std::string ApiConnection::getHttpMinerStatDetail()
  * switch pool) the results may "lie".
  * Eg: Calculating runtime, (current) difficulty and submitted shares must not match the hashrate.
  * Inspired by Andrea Lanfranchi comment on issue 1232:
- *    https://github.com/gangnamtestnet/kawpowminer/pull/1232#discussion_r193995891
+ *    https://github.com/gangnamtestnet/meowpowminer/pull/1232#discussion_r193995891
  * @return The json result
  */
 Json::Value ApiConnection::getMinerStatDetail()
