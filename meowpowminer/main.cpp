@@ -1295,7 +1295,7 @@ int main(int argc, char** argv)
 #endif
 
     // Always out release version
-    auto* bi = kawpowminer_get_buildinfo();
+    auto* bi = meowpowminer_get_buildinfo();
     cout << endl
          << endl
          << "meowpowminer " << bi->project_version << endl

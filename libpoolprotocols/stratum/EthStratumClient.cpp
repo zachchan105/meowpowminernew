@@ -600,7 +600,7 @@ void EthStratumClient::connect_handler(const boost::system::error_code& ec)
     case EthStratumClient::STRATUM:
 
         jReq["jsonrpc"] = "2.0";
-        jReq["params"].append(std::string(kawpowminer_get_buildinfo()->project_name) + "/" + std::string(kawpowminer_get_buildinfo()->project_version));
+        jReq["params"].append(std::string(meowpowminer_get_buildinfo()->project_name) + "/" + std::string(meowpowminer_get_buildinfo()->project_version));
 
         break;
 
@@ -617,7 +617,7 @@ void EthStratumClient::connect_handler(const boost::system::error_code& ec)
 
     case EthStratumClient::ETHEREUMSTRATUM:
 
-        jReq["params"].append(kawpowminer_get_buildinfo()->project_name_with_version);
+        jReq["params"].append(meowpowminer_get_buildinfo()->project_name_with_version);
         jReq["params"].append("EthereumStratum/1.0.0");
 
         break;
@@ -626,7 +626,7 @@ void EthStratumClient::connect_handler(const boost::system::error_code& ec)
 
         jReq["method"] = "mining.hello";
         Json::Value jPrm;
-        jPrm["agent"] = kawpowminer_get_buildinfo()->project_name_with_version;
+        jPrm["agent"] = meowpowminer_get_buildinfo()->project_name_with_version;
         jPrm["host"] = m_conn->Host();
         jPrm["port"] = toCompactHex((uint32_t)m_conn->Port(), HexPrefix::DontAdd);
         jPrm["proto"] = "EthereumStratum/2.0.0";
@@ -1583,7 +1583,7 @@ void EthStratumClient::processResponse(Json::Value& responseObject)
         else if (_method == "client.get_version")
         {
             jReq["id"] = _id;
-            jReq["result"] = kawpowminer_get_buildinfo()->project_name_with_version;
+            jReq["result"] = meowpowminer_get_buildinfo()->project_name_with_version;
 
             if (_rpcVer == 1)
             {
