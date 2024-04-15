@@ -198,7 +198,7 @@ void Farm::setWork(WorkPackage const& _newWp)
     if (m_currentWp.epoch != _newWp.epoch)
     {
         ethash::epoch_context _ec = ethash::get_global_epoch_context(_newWp.epoch);
-        m_currentEc.epochNumber = _newWp.epoch;
+        m_currentEc.epochNumber = _newWp.epoch * 4;
         m_currentEc.lightNumItems = _ec.light_cache_num_items;
         m_currentEc.lightSize = ethash::get_light_cache_size(_ec.light_cache_num_items);
         m_currentEc.dagNumItems = ethash::calculate_full_dataset_num_items(_newWp.epoch);
