@@ -2,8 +2,8 @@ hunter_config(CURL VERSION ${HUNTER_CURL_VERSION} CMAKE_ARGS HTTP_ONLY=ON CMAKE_
 hunter_config(Boost VERSION 1.70.0-p0)
 
 hunter_config(ethash VERSION 1.0.0
-    URL https://github.com/Meowcoin-Foundation/cpp-meowpow/archive/refs/tags/m1.0.2.tar.gz
-    SHA1 6ddd5e225ff334e9775cfbac5df496a8f1621e78
+    URL https://github.com/Meowcoin-Foundation/cpp-meowpow/archive/refs/tags/m1.0.3.tar.gz
+    SHA1 30d6cac8b873754b1b0f691f36853a344870f5f2
 )
 
 hunter_config(OpenCL VERSION
